@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140730131904) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "accounts", force: true do |t|
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -27,9 +24,9 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.integer  "user_id"
   end
 
-  add_index "accounts", ["created_at"], name: "index_accounts_on_created_at", using: :btree
-  add_index "accounts", ["slug"], name: "index_accounts_on_slug", unique: true, using: :btree
-  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id", using: :btree
+  add_index "accounts", ["created_at"], name: "index_accounts_on_created_at"
+  add_index "accounts", ["slug"], name: "index_accounts_on_slug", unique: true
+  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id"
 
   create_table "addresses", force: true do |t|
     t.datetime "created_at",                    null: false
@@ -45,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.string   "addressable_type"
   end
 
-  add_index "addresses", ["addressable_id", "addressable_type"], name: "index_addresses_on_addressable_id_and_addressable_type", using: :btree
+  add_index "addresses", ["addressable_id", "addressable_type"], name: "index_addresses_on_addressable_id_and_addressable_type"
 
   create_table "contacts", force: true do |t|
     t.datetime "created_at",              null: false
@@ -58,9 +55,9 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.integer  "user_id"
   end
 
-  add_index "contacts", ["created_at"], name: "index_contacts_on_created_at", using: :btree
-  add_index "contacts", ["slug"], name: "index_contacts_on_slug", unique: true, using: :btree
-  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
+  add_index "contacts", ["created_at"], name: "index_contacts_on_created_at"
+  add_index "contacts", ["slug"], name: "index_contacts_on_slug", unique: true
+  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id"
 
   create_table "emails", force: true do |t|
     t.datetime "created_at",     null: false
@@ -70,7 +67,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.string   "emailable_type"
   end
 
-  add_index "emails", ["emailable_id", "emailable_type"], name: "index_emails_on_emailable_id_and_emailable_type", using: :btree
+  add_index "emails", ["emailable_id", "emailable_type"], name: "index_emails_on_emailable_id_and_emailable_type"
 
   create_table "events", force: true do |t|
     t.datetime "created_at",                  null: false
@@ -83,8 +80,8 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.integer  "user_id"
   end
 
-  add_index "events", ["name"], name: "index_events_on_name", using: :btree
-  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
+  add_index "events", ["name"], name: "index_events_on_name"
+  add_index "events", ["user_id"], name: "index_events_on_user_id"
 
   create_table "phones", force: true do |t|
     t.datetime "created_at",                  null: false
@@ -98,7 +95,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.string   "phoneable_type"
   end
 
-  add_index "phones", ["phoneable_id", "phoneable_type"], name: "index_phones_on_phoneable_id_and_phoneable_type", using: :btree
+  add_index "phones", ["phoneable_id", "phoneable_type"], name: "index_phones_on_phoneable_id_and_phoneable_type"
 
   create_table "social_media", force: true do |t|
     t.datetime "created_at",                 null: false
@@ -114,7 +111,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.string   "sociable_type"
   end
 
-  add_index "social_media", ["sociable_id", "sociable_type"], name: "index_social_media_on_sociable_id_and_sociable_type", using: :btree
+  add_index "social_media", ["sociable_id", "sociable_type"], name: "index_social_media_on_sociable_id_and_sociable_type"
 
   create_table "tasks", force: true do |t|
     t.datetime "created_at",  null: false
@@ -125,7 +122,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.integer  "user_id"
   end
 
-  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id", using: :btree
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
 
   create_table "users", force: true do |t|
     t.datetime "created_at",                          null: false
@@ -142,7 +139,7 @@ ActiveRecord::Schema.define(version: 20140730131904) do
     t.string   "slug",                                null: false
   end
 
-  add_index "users", ["handle"], name: "index_users_on_handle", unique: true, using: :btree
-  add_index "users", ["slug"], name: "index_users_on_slug", unique: true, using: :btree
+  add_index "users", ["handle"], name: "index_users_on_handle", unique: true
+  add_index "users", ["slug"], name: "index_users_on_slug", unique: true
 
 end

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'rails', '~> 4.1.1'
-gem 'pg', '~> 0.17.1'
+gem 'sqlite3'
 gem 'puma'
 
 gem 'bcrypt', '~> 3.1.7'
@@ -35,21 +35,21 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'rails_12factor', '~> 0.0.2', group: :production
 
 group :development do
-  gem 'better_errors', '~> 1.1.0'
-  gem 'binding_of_caller', '~> 0.7.2'
-  gem 'bullet', '~> 4.13.0'
-  gem 'meta_request', '~> 0.3.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'meta_request'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.1'
-  gem 'factory_girl_rails', '~> 4.4.1'
-  gem 'database_cleaner', '~> 1.3.0'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :test do
-  gem 'capybara', '~> 2.3.0'
-  gem 'selenium-webdriver', '~> 2.42.0'
-  gem 'shoulda-matchers', '~> 2.6.1'
-  gem 'formulaic', '~> 0.0.6'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'formulaic'
 end
