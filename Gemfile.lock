@@ -145,8 +145,7 @@ GEM
     prawn (1.0.0)
       pdf-core (~> 0.2.2)
       ttfunk (~> 1.1.1)
-    puma (2.9.2)
-      rack (>= 1.1, < 2.0)
+    puma (3.8.2)
     pundit (0.2.3)
       activesupport (>= 3.0.0)
     rabl (0.9.3)
@@ -230,7 +229,7 @@ GEM
       coffee-rails
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
-    uglifier (3.1.13)
+    uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     uniform_notifier (1.10.0)
     websocket (1.0.7)
@@ -270,7 +269,7 @@ DEPENDENCIES
   paperclip (~> 4.2.0)
   pg (~> 0.17.1)
   prawn (~> 1.0.0)
-  puma (~> 2.9.0)
+  puma
   pundit (~> 0.2.3)
   rabl (~> 0.9.3)
   rails (~> 4.1.1)
